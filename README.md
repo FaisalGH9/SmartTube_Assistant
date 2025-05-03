@@ -120,7 +120,4 @@ cairocffi
 ## ✨ Credits
 Built with love using Flask, OpenAI, LangChain, yt-dlp, and WeasyPrint.
 
----
 
-## 🌐 License
-MIT
