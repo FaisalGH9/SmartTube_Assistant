@@ -6,6 +6,7 @@ A web app that lets you:
 - 💬 Chat with the video content (like ChatGPT)
 - 🔄 Export summaries as PDF in multiple languages (Arabic supported)
 - 🌙 Toggle between Dark and Light mode
+- 📊 Trace interactions using LangSmith
 
 ---
 
@@ -15,6 +16,7 @@ A web app that lets you:
 - Summarizes using `LangChain + OpenAI`
 - Chats via context-aware Q&A with timestamps
 - PDF export via `WeasyPrint` with RTL language support
+- Full LangSmith tracing integration for summaries and chatbot
 
 ---
 
@@ -33,38 +35,16 @@ pip install -r requirements.txt
 pip install cairocffi
 ```
 
-### Recommended Tools
-- Google Chrome (for full PDF font support)
-- Git (to clone)
-- VS Code (to edit)
-
 ---
 
-## 🔧 Installation
-
-1. **Clone the repo**
-```bash
-git clone https://github.com/yourname/youtube-ai-assistant.git
-cd youtube-ai-assistant
-```
-
-2. **Create virtual environment**
-```bash
-python -m venv venv
-venv\Scripts\activate  # on Windows
-# OR
-source venv/bin/activate  # on macOS/Linux
-```
-
-3. **Install Python packages**
-```bash
-pip install -r requirements.txt
-```
-
-4. **Set OpenAI API key**
-Create a `.env` file:
-```
-OPENAI_API_KEY=your_openai_key_here
+## 🔢 Environment Setup
+Create a `.env` file and include:
+```env
+OPENAI_API_KEY=your_openai_key
+LANGCHAIN_API_KEY=your_langsmith_key
+LANGCHAIN_PROJECT=YouTube AI Assistant
+LANGCHAIN_TRACING_V2=true
+FLASK_SECRET=your_flask_secret
 ```
 
 ---
@@ -73,51 +53,62 @@ OPENAI_API_KEY=your_openai_key_here
 ```bash
 python app.py
 ```
-Then open:
+Then open in your browser:
 ```
 http://127.0.0.1:5000
 ```
 
 ---
 
-## 📊 Folder Structure
+## 📊 Folder Structure & File Descriptions
 ```
-project/
-├── app.py
-├── requirements.txt
-├── .env
-├── templates/
-│   ├── base.html
-│   ├── home.html
-│   ├── choice.html
-│   ├── summary.html
-│   └── chatbot.html
-├── static/
-│   └── fonts/ (optional)
-├── utils/
-│   ├── youtube_utils.py
-│   ├── whisper_utils.py
-│   ├── qa_utils.py
-│   ├── summary_utils.py
+youtube_ai_assistant/
+├── app.py                  # Main Flask app with all routes and server logic
+├── requirements.txt        # Required Python packages
+├── .env                    # Environment config for API keys and secrets
+├── templates/              # HTML templates rendered via Flask
+│   ├── base.html           # Base layout with nav, dark mode, and CSS
+│   ├── home.html           # Homepage for YouTube URL input and language select
+│   ├── choice.html         # Option selection: summary or chatbot
+│   ├── summary.html        # Displays and downloads the video summary
+│   └── chatbot.html        # Chat UI to ask questions about the video
+├── static/                 # Static files like fonts or custom CSS
+│   └── fonts/              # Optional Arabic font folder (not needed with WeasyPrint)
+├── utils/                  # Utility modules for different tasks
+│   ├── youtube_utils.py    # Handles YouTube video/audio download with yt-dlp
+│   ├── whisper_utils.py    # Transcribes audio to text using OpenAI Whisper
+│   ├── qa_utils.py         # Vector database setup and chatbot chain loading (LangChain)
+│   ├── summary_utils.py    # Builds and runs summarization prompts using LangChain
 ```
 
 ---
 
-## ✅ Requirements.txt (sample)
+## 📄 Sample `requirements.txt`
 ```txt
 Flask
 python-dotenv
 yt-dlp
 openai
-weasyprint
 langchain
 faiss-cpu
+weasyprint
 cairocffi
+langsmith
 ```
 
 ---
 
+## 🌐 LangSmith Dashboard
+Log in at [smith.langchain.com](https://smith.langchain.com/) to see traces:
+- Summarize Transcript
+- Load Chatbot QA Chain
+- Process and Store Transcript
+
+---
+
 ## ✨ Credits
-Built with love using Flask, OpenAI, LangChain, yt-dlp, and WeasyPrint.
+Built with Flask, OpenAI, LangChain, yt-dlp, and LangSmith
+
+---
 
 
