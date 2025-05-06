@@ -141,7 +141,7 @@ chromadb
 langchain_community
 
 ---
-
+```
 ## 🌐 LangSmith Dashboard
 Log in at [smith.langchain.com](https://smith.langchain.com/) to see traces:
 - Summarize Transcript
