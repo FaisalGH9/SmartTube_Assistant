@@ -140,8 +140,6 @@ tiktoken
 chromadb
 langchain_community
 
-```
-
 ---
 
 ## 🌐 LangSmith Dashboard
