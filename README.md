@@ -86,7 +86,7 @@ smarttube_assistant/
 │   └── agent_memory_chain.py # Memory-aware chatbot chain setup for context handling
 
 ---
-
+```
 ## 📄 Sample `requirements.txt`
 ```txt
 arabic-reshaper==3.0.0
