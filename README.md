@@ -85,13 +85,27 @@ smarttube_assistant/
 ---
 ```
 
+## SmartTube Assistant interface 
+![home](https://github.com/user-attachments/assets/2b6b1f3e-c17f-4132-a119-ca752f6f052f)
+![choise](https://github.com/user-attachments/assets/df0e120f-f53b-4e51-9a17-9133e0fa6c1c)
+![summery](https://github.com/user-attachments/assets/e903b5d5-5eef-4157-97d2-4d87419ee029)
+![chatboot](https://github.com/user-attachments/assets/14996d34-c995-4682-ad18-6c3512963bca)
+
+
+---
+---
+
+## SmartTube Assistant App life demo video 
+Google drive link :
+
+
+---
 ## 🌐 LangSmith Dashboard
 Log in at [smith.langchain.com](https://smith.langchain.com/) to see traces:
 - Summarize Transcript
 - Load Chatbot QA Chain
 - Process and Store Transcript
-
-
+---
 
 
 
