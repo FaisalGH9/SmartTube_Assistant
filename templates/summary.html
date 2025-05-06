@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="container mt-4">
+    <h2 class="text-center">📄 Generate a Summary</h2>
+
+    <form method="POST" action="{{ url_for('summary') }}" id="summary-form" onsubmit="showSpinner('spinner', 'summary-form')">
+      <div class="mb-3">
+        <label for="summary_language" class="form-label">Choose Summary Language:</label>
+        <select name="summary_language" id="summary_language" class="form-select" required>
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+          <option value="fr">French</option>
+          <option value="es">Spanish</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="summary_type" class="form-label">Choose Summary Type:</label>
+        <select name="summary_type" id="summary_type" class="form-select" required>
+          <option value="regular">📝 Regular Summary</option>
+          <option value="tutorial">📘 Tutorial (Study Guide)</option>
+          <option value="storytelling">📖 Storytelling (Detailed Narrative)</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-danger w-100">Generate Summary</button>
+    </form>
+
+    <!-- Beautiful Spinner -->
+    <div id="spinner" class="text-center mt-4" style="display: none;">
+      <div class="spinner-border text-danger" style="width: 3rem; height: 3rem;" role="status"></div>
+      <p class="mt-2 text-muted">Generating summary, please wait...</p>
+    </div>
+
+    {% if summary_text %}
+      <hr>
+      <div class="card p-4 mt-4 shadow-lg position-relative">
+        <h3 class="text-center">🧾 Summary Result</h3>
+        <pre style="white-space: pre-wrap;">{{ summary_text }}</pre>
+
+        <form method="POST" action="{{ url_for('download_summary') }}">
+          <input type="hidden" name="summary_content" value="{{ summary_text | e }}">
+          <button type="submit" class="btn btn-primary position-absolute" style="top: 10px; right: 10px;">⬇️ Download as PDF</button>
+        </form>
+      </div>
+    {% endif %}
+  </div>
+{% endblock %}
