@@ -84,72 +84,14 @@ smarttube_assistant/
 
 ---
 ```
-## 📄 Sample `requirements.txt`
-```txt
-arabic-reshaper==3.0.0
-asn1crypto==1.5.1
-blinker==1.9.0
-certifi==2025.4.26
-cffi==1.17.1
-chardet==5.2.0
-charset-normalizer==3.4.2
-click==8.1.8
-colorama==0.4.6
-cryptography==44.0.3
-cssselect2==0.8.0
-defusedxml==0.7.1
-Flask==3.1.0
-html5lib==1.1
-idna==3.10
-itsdangerous==2.2.0
-Jinja2==3.1.6
-lxml==5.4.0
-MarkupSafe==3.0.2
-oscrypto==1.3.0
-pillow==11.2.1
-pycparser==2.22
-pyHanko==0.26.0
-pyhanko-certvalidator==0.26.8
-pypdf==5.4.0
-python-bidi==0.6.6
-python-dotenv==1.1.0
-PyYAML==6.0.2
-qrcode==8.2
-reportlab==4.4.0
-requests==2.32.3
-six==1.17.0
-svglib==1.5.1
-tinycss2==1.4.0
-tzdata==2025.2
-tzlocal==5.3.1
-uritools==5.0.0
-urllib3==2.4.0
-webencodings==0.5.1
-Werkzeug==3.1.3
-xhtml2pdf==0.2.17
-flask
-python-dotenv
-openai
-yt_dlp
-langchain
-xhtml2pdf
-tiktoken
-chromadb
-langchain_community
 
----
-```
 ## 🌐 LangSmith Dashboard
 Log in at [smith.langchain.com](https://smith.langchain.com/) to see traces:
 - Summarize Transcript
 - Load Chatbot QA Chain
 - Process and Store Transcript
 
----
 
-## ✨ Credits
-Built with Flask, OpenAI, LangChain, yt-dlp, and LangSmith
 
----
 
 
