@@ -1,7 +1,7 @@
 # SmartTube Assistant 🎧
 
 ![_project_work_ drawio](https://github.com/user-attachments/assets/43192a06-d2bf-4987-b59c-d1cfb5dfb6d2)
-
+---
 ##A SmartTube Assistant that lets you:
 - ▶️ Process any YouTube video
 - 📄 Generate regular or tutorial-style summaries
@@ -9,7 +9,7 @@
 - 🔄 Export summaries as PDF in multiple languages (Arabic supported)
 - 🌙 Toggle between Dark and Light mode
 - 📊 Trace interactions using LangSmith
-
+---
 ---
 
 ## workfloow 
