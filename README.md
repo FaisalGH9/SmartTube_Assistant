@@ -1,6 +1,6 @@
 # SmartTube Assistant 🎧
 ![workFloow](https://github.com/user-attachments/assets/7b2174d8-5578-4c79-8971-be1ca69e28dc)
-A web app that lets you:
+##A SmartTube Assistant that lets you:
 - ▶️ Process any YouTube video
 - 📄 Generate regular or tutorial-style summaries
 - 💬 Chat with the video content (like ChatGPT)
