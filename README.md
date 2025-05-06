@@ -95,7 +95,7 @@ smarttube_assistant/
 ---
 ---
 
-## SmartTube Assistant App life demo video 
+## SmartTube Assistant App live demo video 
 Google drive link :
 
 
