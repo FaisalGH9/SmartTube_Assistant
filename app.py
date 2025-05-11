@@ -153,12 +153,12 @@ def download_summary():
     summary_text = request.form.get("summary_content", "")
     video_id = session.get("video_id", "summary")
 
-    html = f"""
-    <html>
-    <head><meta charset="UTF-8"><style>body {{ font-family: Arial; }}</style></head>
-    <body><h2>Summary</h2><p>{summary_text.replace('\n', '<br>')}</p></body>
-    </html>
-    """
+    # Use regular string formatting instead of f-string with triple quotes
+    html = "<html>"
+    html += "<head><meta charset=\"UTF-8\"><style>body { font-family: Arial; }</style></head>"
+    html += "<body><h2>Summary</h2>"
+    html += f"<p>{summary_text.replace('\n', '<br>')}</p>"
+    html += "</body></html>"
 
     pdf_buffer = BytesIO()
     pisa_status = pisa.CreatePDF(html, dest=pdf_buffer)
