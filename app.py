@@ -153,11 +153,14 @@ def download_summary():
     summary_text = request.form.get("summary_content", "")
     video_id = session.get("video_id", "summary")
 
-    # Use regular string formatting instead of f-string with triple quotes
+    # Process the text replacement outside the f-string
+    processed_text = summary_text.replace('\n', '<br>')
+    
+    # Then use the processed text in the HTML
     html = "<html>"
     html += "<head><meta charset=\"UTF-8\"><style>body { font-family: Arial; }</style></head>"
     html += "<body><h2>Summary</h2>"
-    html += f"<p>{summary_text.replace('\n', '<br>')}</p>"
+    html += f"<p>{processed_text}</p>"
     html += "</body></html>"
 
     pdf_buffer = BytesIO()
